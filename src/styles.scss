@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+
+  font-family: "Galano", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Galano";
+  src: local("Galano"), url(./assets/fonts/GalanoGrotesqueAltMedium.otf) format("truetype");
+}

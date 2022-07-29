@@ -1,0 +1,11 @@
+<label for="{{ radioId }}">
+  <input
+    type="radio"
+    [id]="radioId"
+    [name]="radioName"
+    [value]="radioValue"
+    (change)="handleChange($event)"
+    [disabled]="radioDisabled"
+  />
+  <ng-content></ng-content>
+</label>

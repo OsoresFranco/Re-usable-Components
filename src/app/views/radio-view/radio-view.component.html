@@ -1,0 +1,49 @@
+<form [formGroup]="cardSelection">
+  <label for="name">Nombre Completo</label>
+  <input type="text" formControlName="name" id="name" />
+  <div class="card--picker-element">
+    <app-radio formControlName="card">
+      <app-radio-option
+        [radioValue]="'blue'"
+        [radioName]="'cards'"
+        [radioId]="'blue'"
+        [radioDisabled]="false"
+        >Blue
+      </app-radio-option>
+    </app-radio>
+    <img src="../../../assets/blue.png" alt="blue card" />
+  </div>
+
+  <div class="card--picker-element">
+    <app-radio formControlName="card">
+      <app-radio-option
+        [radioValue]="'silver'"
+        [radioName]="'cards'"
+        [radioId]="'silver'"
+        [radioDisabled]="false"
+        >Silver
+      </app-radio-option>
+    </app-radio>
+    <img src="../../../assets/silver.png" alt="silver card" />
+  </div>
+
+  <div class="card--picker-element">
+    <app-radio formControlName="card">
+      <app-radio-option
+        [radioValue]="'gold'"
+        [radioName]="'cards'"
+        [radioId]="'gold'"
+        [radioDisabled]="false"
+        >Gold
+      </app-radio-option>
+    </app-radio>
+    <img src="../../../assets/gold.png" alt="gold card" />
+  </div>
+</form>
+
+<div class="selected">
+  <h2>
+    La tarjeta seleccionada es: {{ this.cardSelection.get("card")?.value }}
+  </h2>
+  <h3>Será enviada a: {{ this.cardSelection.get("name")?.value }}</h3>
+</div>

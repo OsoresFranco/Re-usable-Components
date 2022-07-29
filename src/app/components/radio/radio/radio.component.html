@@ -1,0 +1,13 @@
+<div (change)="changeTest($event)">
+  <ng-container *ngIf="align === 'horizontal'">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="align === 'vertical'">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </ng-container>
+</div>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

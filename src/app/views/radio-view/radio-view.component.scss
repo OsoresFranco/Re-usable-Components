@@ -1,0 +1,43 @@
+.card--picker-element{
+    min-width: 80%;
+    max-width: 100%;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        width: 100px;
+        height: auto;
+    }
+}
+
+.selected{
+    border: 2px solid rgb(104, 104, 240);
+    border-radius: 10px;
+}
+
+h2{
+    width: 80%;
+}
+
+.selected{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+   margin: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
