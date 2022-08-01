@@ -1,0 +1,34 @@
+:host {
+  width: 132px;
+  height:auto;
+
+  margin:10px
+}
+
+.card--media-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+
+  background: #ffffff;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  min-width: 132px;
+  max-width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info{
+  margin-top: 8px;
+  width: 100%;
+}

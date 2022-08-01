@@ -3,11 +3,13 @@ html,
 body {
   margin: 0px;
   padding: 0px;
+  background: #17012f;
 
   font-family: "Galano", Arial, Helvetica, sans-serif;
 }
 
 @font-face {
   font-family: "Galano";
-  src: local("Galano"), url(./assets/fonts/GalanoGrotesqueAltMedium.otf) format("truetype");
+  src: local("Galano"),
+    url(./assets/fonts/GalanoGrotesqueAltMedium.otf) format("truetype");
 }

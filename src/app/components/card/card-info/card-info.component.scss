@@ -1,0 +1,34 @@
+.title {
+  color: #f9f4f9;
+  font-size: 12px;
+  text-align: left;
+  max-height: 3em;
+  line-height: 1.5em;
+  overflow: clip;
+}
+
+.info--price-container {
+  display: flex;
+  width: 105px;
+  color: #f9f4f9;
+
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+
+  .price {
+    font-size: 14px;
+  }
+
+  .discount {
+    font-size: 10px;
+    color: #ffa4e8;
+  }
+
+  .price-before {
+    font-size: 12px;
+    text-decoration: line-through;
+    font-weight: light;
+    color: #707070;
+  }
+}

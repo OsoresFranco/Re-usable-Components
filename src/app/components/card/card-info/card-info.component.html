@@ -1,1 +1,19 @@
-<p>card-info works!</p>
+<div class="info">
+  <div class="title">
+    <ng-content select="[cardInfo='title']"></ng-content>
+  </div>
+  <div class="info--price-container">
+    <div class="price">
+      <ng-content select="[cardInfo='price']"></ng-content>
+    </div>
+    <div class="discount">
+      <ng-content select="[cardInfo='discount']" class="discount"></ng-content>
+    </div>
+    <div class="price-before">
+      <ng-content
+        select="[cardInfo='priceBefore']"
+        class="price-before"
+      ></ng-content>
+    </div>
+  </div>
+</div>
