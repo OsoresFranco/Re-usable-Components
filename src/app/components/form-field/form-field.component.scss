@@ -1,0 +1,60 @@
+.form-field {
+  &__label {
+    color: #ffffff;
+    font-size: 12px;
+  }
+
+  &__input {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px 10px 5px 0px;
+    border-bottom: 1px solid rgb(253, 10, 50);
+
+    &:focus {
+      border-bottom: none;
+      outline: 1px solid pink;
+      border-radius: 4px;
+      padding-left: 4px;
+    }
+  }
+
+  &.form-field--filled {
+    background: rgba($color: #ffffff, $alpha: 0.4);
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 50%;
+
+    .form-field__label {
+      color: rgb(48, 48, 48);
+      font-weight: bold;
+      
+    }
+
+    .form-field__input {
+      color: rgb(48, 48, 48);
+      border-bottom: none;
+      
+
+      &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgb(48, 48, 48);
+        opacity: 1; /* Firefox */
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgb(48, 48, 48);
+      }
+
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: rgb(48, 48, 48);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

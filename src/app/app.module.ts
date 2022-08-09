@@ -9,6 +9,10 @@ import { RadioOptionComponent } from './components/radio/radio-option/radio-opti
 import { RadioComponent } from './components/radio/radio/radio.component';
 import { CardComponent } from './components/card/card/card.component';
 import { CardInfoComponent } from './components/card/card-info/card-info.component';
+import { CardViewComponent } from './views/card-view/card-view.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
+import { TitleComponent } from './components/title/title/title.component';
+import { ErrorComponent } from './components/form-field/error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { CardInfoComponent } from './components/card/card-info/card-info.compone
     RadioComponent,
     CardComponent,
     CardInfoComponent,
+    CardViewComponent,
+    FormFieldComponent,
+    TitleComponent,
+    ErrorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

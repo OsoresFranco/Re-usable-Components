@@ -1,0 +1,16 @@
+<div class="form-field {{ _filled }}">
+  <label class="form-field__label" for="{{ id }}">
+    <ng-content select=".label"></ng-content>
+  </label>
+  <input
+    (blur)="onTouched()"
+    (change)="changeValue($event)"
+    class="form-field__input"
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ id }}"
+    [disabled]="disabled"
+    autocomplete="{{ autocomplete }}"
+    placeholder="{{ placeholder }}"
+  />
+</div>

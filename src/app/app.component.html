@@ -1,33 +1,99 @@
 <div class="test">
-  <app-card>
-    <img class="media" src="../assets/producto.png" alt="producto" />
-    <app-card-info class="info">
-      <div cardInfo="title">Teclado con titulo demasiado largo para entrar en este espacio</div>
-      <div cardInfo="price">$3099</div>
-      <div cardInfo="discount">%20 DTO.</div>
-    </app-card-info>
-  </app-card>
+  <form [formGroup]="form1">
+    <h3 class="title">Style Transparent</h3>
+    <app-form-field
+      formControlName="name"
+      [id]="'name'"
+      [name]="'name'"
+      [type]="'text'"
+      [disabled]="false"
+      [autocomplete]="'on'"
+      [placeholder]="'Nombre Completo'"
+    >
+      <div class="label">Nombre</div>
+    </app-form-field>
+    <app-error *ngIf="hasError(form1, 'name')">
+      Este campo es requerido
+    </app-error>
 
-  <app-card>
-    <video [muted]="true" class="media" autoplay loop>
-      <source src="../assets/drift.mp4" type="video/mp4" />
-    </video>
-    <app-card-info class="info">
-      <div cardInfo="title">Experiencia TC2000</div>
-      <div cardInfo="price">$6219</div>
-      <div cardInfo="priceBefore">$9000</div>
-    </app-card-info>
-  </app-card>
+    <app-form-field
+      formControlName="celular"
+      [id]="'celular'"
+      [name]="'celular'"
+      [type]="'number'"
+      [disabled]="false"
+      [autocomplete]="'off'"
+      [placeholder]="'Celular'"
+    >
+      <div class="label">Celular</div>
+    </app-form-field>
+    <app-error *ngIf="hasError(form1, 'celular')">
+      Este campo es requerido
+    </app-error>
 
-  <app-card>
-    <img class="media" src="../assets/head.png" alt="producto" />
+    <app-form-field
+      formControlName="email"
+      [id]="'email'"
+      [name]="'email'"
+      [type]="'email'"
+      [disabled]="false"
+      [autocomplete]="'off'"
+      [placeholder]="'Email'"
+    >
+      <div class="label">Email</div>
+    </app-form-field>
+    <app-error *ngIf="hasError(form1, 'email')">
+      Este campo es requerido
+    </app-error>
 
-    <app-card-info class="info">
-      <div cardInfo="title">Auriculares Logitech 220A</div>
-      [title]="'Auricular Logitech 220A'"
-      <div cardInfo="price">$3099</div>
-      <div cardInfo="priceBefore">$4099</div>
-    </app-card-info>
-  </app-card>
+    <div class="form__radio-section">
+      <div class="form__radio-section__card">
+        <app-radio formControlName="card">
+          <app-radio-option
+            [radioValue]="'blue'"
+            [radioName]="'cards'"
+            [radioId]="'blue'"
+            [radioDisabled]="false"
+            >Blue
+          </app-radio-option>
+        </app-radio>
+        <img src="../../../assets/blue.png" alt="blue card" />
+      </div>
+
+      <div class="form__radio-section__card">
+        <app-radio formControlName="card">
+          <app-radio-option
+            [radioValue]="'silver'"
+            [radioName]="'cards'"
+            [radioId]="'silver'"
+            [radioDisabled]="false"
+            >Silver
+          </app-radio-option>
+        </app-radio>
+        <img src="../../../assets/silver.png" alt="silver card" />
+      </div>
+
+      <div class="form__radio-section__card">
+        <app-radio formControlName="card">
+          <app-radio-option
+            [radioValue]="'gold'"
+            [radioName]="'cards'"
+            [radioId]="'gold'"
+            [radioDisabled]="false"
+            >Gold
+          </app-radio-option>
+        </app-radio>
+        <img src="../../../assets/gold.png" alt="gold card" />
+      </div>
+    </div>
+
+    <button
+      [ngClass]="{ disabled: form1.invalid }"
+      [disabled]="form1.invalid"
+      (click)="onClick()"
+    >
+      Submit
+    </button>
+  </form>
 </div>
 <router-outlet></router-outlet>
